@@ -4,7 +4,7 @@ const cors = require('cors')
 
 const helmet = require('helmet')
 
-const someRouter = require('path')
+// const someRouter = require('path')
 
 const server = express()
 
@@ -12,7 +12,7 @@ const server = express()
 server.use(helmet())
 server.use(cors())
 server.use(express.json())
-server.use('/TABLE', someRouter)
+// server.use('/TABLE', someRouter)
 
 module.exports = server;
 
