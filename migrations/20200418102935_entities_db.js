@@ -8,6 +8,16 @@ exports.up = function(knex) {
       tbl.text('description', 128);
       tbl.boolean('project_completed', false)
         .notNullable();
+      tbl.integer('task_id')
+        .unsigned()
+        .notNullable()
+        .references('id')
+        .inTable('task')
+      tbl.integer('resource_id')
+        .unsigned()
+        .notNullable()
+        .references('id')
+        .inTable('resource')
   })
   .createTable('resource', tbl => {
       tbl.increments();
