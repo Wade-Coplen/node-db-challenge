@@ -6,7 +6,7 @@ exports.up = function(knex) {
         .notNullable()
         .unique();
       tbl.text('description', 128);
-      tbl.boolean('project_completed', false)
+      tbl.boolean('project_complete', false)
         .notNullable();
       
   })
@@ -32,7 +32,8 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTableIfExists('project')
+  return knex.schema
+  .dropTableIfExists('project')
   .dropTableIfExists('resource')
   .dropTableIfExists('task')
 };
