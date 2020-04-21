@@ -5,9 +5,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('project').insert([
-        {id: 1, name: 'Project Veritaus', description: 'Exposing liberal bias', project_complete: true},
-        {id: 2, name: 'Project Runway', description: 'Models walking and stuff', project_complete: true},
-        {id: 3, name: 'Project Gotham Racing', description: 'Awesom arcade racer', project_complete: ''}
+        {name: 'Project Veritaus', description: 'Exposing liberal bias', project_complete: true},
+        {name: 'Project Runway', description: 'Models walking and stuff', project_complete: true},
+        {name: 'Project Gotham Racing', description: 'Awesom arcade racer', project_complete: false}
       ]);
     });
     
